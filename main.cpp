@@ -8,9 +8,12 @@ int main()
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //kiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    ksiazkaAdresowa.logowanie();
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+
     return 0;
 }
 
