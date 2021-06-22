@@ -63,10 +63,6 @@ void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
 {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
-void UzytkownikMenedzer::logowanie()
-{
-    idZalogowanegoUzytkownika = logowanieUzytkownika();
-}
 int UzytkownikMenedzer::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
@@ -87,17 +83,20 @@ int UzytkownikMenedzer::logowanieUzytkownika()
                 {
                      cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    return uzytkownicy[i].pobierzId();
+                    idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
+                    return idZalogowanegoUzytkownika;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            return 0;
+            idZalogowanegoUzytkownika = 0;
+            return idZalogowanegoUzytkownika;
         }
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    return 0;
+    idZalogowanegoUzytkownika = 0;
+    return idZalogowanegoUzytkownika;
 }
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 {
@@ -116,4 +115,9 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     }
    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
-
+int UzytkownikMenedzer::wylogujUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+    adresaci.clear();
+    return idZalogowanegoUzytkownika;
+}
