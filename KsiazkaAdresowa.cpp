@@ -8,9 +8,9 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 {
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
-void KsiazkaAdresowa::logowanie()
+void KsiazkaAdresowa::logowanieUzytkownika()
 {
-    uzytkownikMenedzer.logowanie();
+    uzytkownikMenedzer.logowanieUzytkownika();
 }
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 {
