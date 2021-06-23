@@ -59,17 +59,13 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
         cout << uzytkownicy[i].pobierzHaslo() << endl;
     }
 }
-void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
-{
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-int UzytkownikMenedzer::logowanieUzytkownika()
+void UzytkownikMenedzer::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
-    cin >> login;// = MetodyPomocnicze::wczytajLinie();
+    login = MetodyPomocnicze::wczytajLinie();
     for(int i = 0; i < uzytkownicy.size(); i++)
     {
         if (uzytkownicy[i].pobierzLogin() == login)
@@ -84,19 +80,16 @@ int UzytkownikMenedzer::logowanieUzytkownika()
                      cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
-                    return idZalogowanegoUzytkownika;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
             idZalogowanegoUzytkownika = 0;
-            return idZalogowanegoUzytkownika;
         }
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
     idZalogowanegoUzytkownika = 0;
-    return idZalogowanegoUzytkownika;
 }
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 {
@@ -115,9 +108,18 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     }
    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
-int UzytkownikMenedzer::wylogujUzytkownika()
+void UzytkownikMenedzer::wylogujUzytkownika()
 {
     idZalogowanegoUzytkownika = 0;
-    adresaci.clear();
+}
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
+{
     return idZalogowanegoUzytkownika;
+}
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+{
+    if(idZalogowanegoUzytkownika > 1)
+        return true;
+    else
+        return false;
 }
