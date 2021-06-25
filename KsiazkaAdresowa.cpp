@@ -26,4 +26,7 @@ void KsiazkaAdresowa::wylogujUzytkownika()
 {
     uzytkownikMenedzer.wylogujUzytkownika();
 }
-
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+    adresatMenedzer->wyswietlWszystkichAdresatow();
+}

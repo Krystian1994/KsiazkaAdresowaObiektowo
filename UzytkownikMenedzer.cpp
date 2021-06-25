@@ -20,13 +20,13 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
     do
     {
         cout << "Podaj login: ";
-        cin >> login;
+        login = MetodyPomocnicze::wczytajLinie();
         uzytkownik.ustawLogin(login);
     } while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
 
     string haslo;
     cout << "Podaj haslo: ";
-    cin >> haslo;
+    haslo = MetodyPomocnicze::wczytajLinie();
     uzytkownik.ustawHaslo(haslo);
 
     return uzytkownik;
@@ -58,6 +58,7 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
         cout << uzytkownicy[i].pobierzLogin() << endl;
         cout << uzytkownicy[i].pobierzHaslo() << endl;
     }
+    system("pause");
 }
 void UzytkownikMenedzer::logowanieUzytkownika()
 {
@@ -73,29 +74,30 @@ void UzytkownikMenedzer::logowanieUzytkownika()
             for (int iloscProb = 3; iloscProb > 0; iloscProb--)
             {
                 cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
-                cin >> haslo;// = (MetodyPomocnicze::wczytajLinie());
+                haslo = MetodyPomocnicze::wczytajLinie();
 
                 if (uzytkownicy[i].pobierzHaslo() == haslo)
                 {
-                     cout << endl << "Zalogowales sie." << endl << endl;
-                    system("pause");
+                    cout << endl << "Zalogowales sie." << endl << endl;
                     idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
+                    system("pause");
+                    return;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            idZalogowanegoUzytkownika = 0;
+            return;
         }
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    idZalogowanegoUzytkownika = 0;
+    return;
 }
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 {
     string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
-    cin >> noweHaslo;// = MetodyPomocnicze::wczytajLinie();
+    noweHaslo = MetodyPomocnicze::wczytajLinie();
     for(int i = 0; i < uzytkownicy.size(); i++)
     {
         if (uzytkownicy[i].pobierzId() == idZalogowanegoUzytkownika)
@@ -118,7 +120,7 @@ int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 }
 bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
 {
-    if(idZalogowanegoUzytkownika > 1)
+    if(idZalogowanegoUzytkownika > 0)
         return true;
     else
         return false;
