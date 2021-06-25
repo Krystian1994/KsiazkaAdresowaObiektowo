@@ -19,7 +19,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata());
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
@@ -62,7 +62,7 @@ void AdresatMenedzer::wyswietlWszystkichAdresatow()
 }
 void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
 {
-    cout << endl << "Id:         " << adresat.pobierzId() << endl;
+    cout << endl << "Id:                 " << adresat.pobierzId() << endl;
     cout << "Imie:               " << adresat.pobierzImie() << endl;
     cout << "Nazwisko:           " << adresat.pobierzNazwisko() << endl;
     cout << "Numer telefonu:     " << adresat.pobierzNumerTelefonu() << endl;
