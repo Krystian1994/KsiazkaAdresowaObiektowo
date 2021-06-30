@@ -71,5 +71,5 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
 }
 void AdresatMenedzer::usunAdresata()
 {
-    plikZAdresatami.usunAdresata(adresaci);
+    plikZAdresatami.usunAdresata(adresaci); // usuwanie adresata
 }
