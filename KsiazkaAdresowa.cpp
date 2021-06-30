@@ -20,13 +20,31 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 }
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMenedzer->dodajAdresata();
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->dodajAdresata();
+    } else
+    {
+        cout << "Aby dodac adresata nalezy najpierw sie zalogowac" << endl;
+        system("pause");
+    }
+
 }
 void KsiazkaAdresowa::wylogujUzytkownika()
 {
     uzytkownikMenedzer.wylogujUzytkownika();
+    delete adresatMenedzer;
+    adresatMenedzer = NULL;
 }
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     adresatMenedzer->wyswietlWszystkichAdresatow();
+}
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
+{
+    uzytkownikMenedzer.czyUzytkownikJestZalogowany();
+}
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMenedzer->usunAdresata();
 }
