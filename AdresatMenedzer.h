@@ -29,7 +29,7 @@ public:
     };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
-    void usunAdresata();
+    void usunAdresata(); //usuwaieAdresata
 };
 
 #endif ADRESATMENEDZER_H
