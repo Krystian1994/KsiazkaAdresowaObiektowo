@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1625070676 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\main.cpp
+1625393401 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 
-1625067413 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\ksiazkaadresowa.cpp
+1625393401 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 
 1623844990 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1625067413 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\ksiazkaadresowa.h
+1625393401 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenedzer.h"
 	"AdresatMenedzer.h"
@@ -35,15 +35,16 @@
 	<sstream>
 	<algorithm>
 
-1624483661 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\plikzuzytkownikami.h
+1625396365 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
 	<cstdlib>
+	"PlikTekstowy.h"
 	"Uzytkownik.h"
 	"MetodyPomocnicze.h"
 
-1624483661 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\plikzuzytkownikami.cpp
+1625402372 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
 1624612255 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\uzytkownikmenedzer.cpp
@@ -55,13 +56,13 @@
 1624483661 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\adresat.h
 	<iostream>
 
-1625070882 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\plikzadresatami.cpp
+1625327540 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
-1625071284 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\adresatmenedzer.cpp
+1625393401 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\adresatmenedzer.cpp
 	"AdresatMenedzer.h"
 
-1625070676 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\adresatmenedzer.h
+1625393401 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\adresatmenedzer.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -71,11 +72,12 @@
 	"MetodyPomocnicze.h"
 	"PlikZAdresatami.h"
 
-1625071247 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\plikzadresatami.h
+1625396753 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\plikzadresatami.h
 	<iostream>
 	<vector>
 	<fstream>
 	<cstdlib>
+	"PlikTekstowy.h"
 	"Adresat.h"
 	"MetodyPomocnicze.h"
 
@@ -158,4 +160,11 @@
 
 1625042840 source:c:\users\surow\desktop\ksi¹¿ka adresowa obiektowo\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
+
+1625402258 c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\pliktekstowy.h
+	<iostream>
+	<fstream>
+
+1625399754 source:c:\users\surow\documents\programy napisane w c++\ksi¹¿ka adresowa obiektowo\pliktekstowy.cpp
+	"PlikTekstowy.h"
 
