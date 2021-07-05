@@ -18,9 +18,15 @@ class AdresatMenedzer
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
+    int idUsunietegoAdresata;
 
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
+    char wybierzOpcjeZMenuEdycja();
+    int podajIdWybranegoAdresata();
+    void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami,int idZalogowanegoUzytkownika)
     : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
@@ -29,6 +35,10 @@ public:
     };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void usunAdresata();
+    void edytujAdresata();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
 
 #endif ADRESATMENEDZER_H
