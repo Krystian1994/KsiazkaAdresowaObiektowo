@@ -8,7 +8,6 @@ char wybierzOpcjeZMenuUzytkownika();
 int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt","Adresaci.txt");
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     char wybor;
     while (true)
     {

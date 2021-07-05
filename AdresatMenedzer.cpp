@@ -94,7 +94,7 @@ void AdresatMenedzer::usunAdresata()
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
                 idUsunietegoAdresata = idUsuwanegoAdresata;
-                podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+                //podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
                 break;
             }
             else
@@ -102,7 +102,7 @@ void AdresatMenedzer::usunAdresata()
                 cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
                 system("pause");
                 idUsunietegoAdresata = 0;
-                podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+                //podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
             }
         }
     }
@@ -111,8 +111,8 @@ void AdresatMenedzer::usunAdresata()
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
         system("pause");
         idUsunietegoAdresata = 0;
-        podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
     }
+    podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
 }
 int AdresatMenedzer::podajIdWybranegoAdresata()
 {
@@ -124,7 +124,8 @@ int AdresatMenedzer::podajIdWybranegoAdresata()
 void AdresatMenedzer::podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata()
 {
     if (idUsunietegoAdresata == plikZAdresatami.pobierzIdOstatniegoAdresata())
-        plikZAdresatami.pobierzZPlikuIdOstatniegoAdresata();
+        plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+        //plikZAdresatami.pobierzZPlikuIdOstatniegoAdresata();
 }
 void AdresatMenedzer::edytujAdresata()
 {
